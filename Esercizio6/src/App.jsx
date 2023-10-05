@@ -15,6 +15,6 @@ function App() {
 
 export default App
 
-/* posso renderizzare il componente message direttamente dentro app e verrà visualizzato allo stesso modo correttamente */
+/* posso renderizzare il componente message direttamente dentro app e verrà visualizzato allo stesso modo correttamente, in più potrà essere riutilizzato in più parti dell'app */
 
 
