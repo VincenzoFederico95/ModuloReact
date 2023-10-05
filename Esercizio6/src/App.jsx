@@ -12,4 +12,4 @@ function App() {
 
 export default App
 
-/* l'applicazione è stata aperta sul browser e viene visualizzato correttamente il componente Helloworld */
+
