@@ -1,10 +1,12 @@
 function App() {
 
-  const hello = "Hello world"
+  function creaNome(name){
+    return <h1>Hello, {name}</h1>
+  }
 
   return (
     <>
-    <h1>{hello}</h1>
+    {creaNome("Vincenzo")}
     </>
   )
 }
