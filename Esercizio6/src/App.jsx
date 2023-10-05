@@ -1,5 +1,4 @@
 import { Helloworld } from "./Helloworld"
-import { Message } from "./Message"
 
 function App() {
   
