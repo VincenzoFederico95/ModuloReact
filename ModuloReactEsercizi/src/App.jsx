@@ -13,5 +13,5 @@ function App() {
 
 export default App
 
-/*Come possiamo vedere eseguendo il codice, togliendo il parametro 
-"nome" dalla funzione non visualizziamo più la variabile a schermo e quindi l'elemento è incompleto
+/*Se utilizziamo una JSX expression invece di una stringa 
+verrà ugualmente renderizzata a schermo come elemento HTML*/
