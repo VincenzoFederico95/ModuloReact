@@ -1,17 +1,14 @@
 function App() {
 
-  function creaNome(){
-    return <h1>Hello, {name}</h1>
+  function sum(a, b) {
+    return a + b
   }
 
   return (
     <>
-    {creaNome("Vincenzo")}
+    <h2>{sum(99,5)}</h2>
     </>
   )
 }
 
 export default App
-
-/*Se utilizziamo una JSX expression invece di una stringa 
-verrà ugualmente renderizzata a schermo come elemento HTML*/
