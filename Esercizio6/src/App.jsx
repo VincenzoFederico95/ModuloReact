@@ -10,7 +10,7 @@ function App() {
     <>
     <Helloworld/>
     <Message/>
-    <Welcome name="Vicio"/>
+    <Welcome/>
     </>
   )
 }
