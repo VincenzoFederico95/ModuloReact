@@ -10,12 +10,12 @@ function App() {
     <>
     <Helloworld/>
     <Message/>
-    <Welcome name = {<strong> Vicio </strong>} age={28}/>
+    <Welcome name = {<strong>John</strong>} age={28}/>
     </>
   )
 }
 
-export default App
+export default App;
 
 
 
