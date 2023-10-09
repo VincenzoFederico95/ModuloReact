@@ -10,15 +10,14 @@ function App() {
     <>
     <Helloworld/>
     <Message/>
-    <Welcome name = {<strong> Vicio </strong>} age = {28}/>
+    <Welcome name = {<strong> Vicio </strong>}/>
     </>
   )
 }
 
 export default App
 
-/* utilizzando questa espressione viene visualizzato a scheremo comunque il "name"
-in grassetto /*
+
 
 
 
