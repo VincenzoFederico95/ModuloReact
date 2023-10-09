@@ -1,5 +1,6 @@
 import { Helloworld } from "./Helloworld"
 import { Message } from "./Message"
+import { Welcome } from "./Welcome"
 
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <>
     <Helloworld/>
     <Message/>
+    <Welcome name="Vicio"/>
     </>
   )
 }
