@@ -4,6 +4,7 @@ import { Counter } from "./Counter";
 import { Helloworld } from "./Helloworld"
 import { Message } from "./Message"
 import { MouseClicker } from "./Mouseclicker";
+import { MultiButton } from "./Multibutton";
 import { Welcome } from "./Welcome"
 import { useState } from "react";
 
@@ -33,6 +34,7 @@ function App() {
       <Counter counter={counter} incrementCounter={incrementCounter} decrementCounter={decrementCounter}  reset = {reset}/>
       <Clock/>
       <MouseClicker name={"one"}/>
+      <MultiButton nameOne="one" nameTwo ="two"  nameThree = "three"/>
      </>
 
   );
