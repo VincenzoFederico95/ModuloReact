@@ -13,3 +13,5 @@ export function Counter() {
         </div>
     )
 }
+
+/* il parametro setter deve essere una callback dato che la funzione potrebbe essere asincrona e quindi non aggiornarsi nel modo corretto */
