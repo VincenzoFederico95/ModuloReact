@@ -1,4 +1,5 @@
 import { AlertClock } from "./Alertclock";
+import { Clock } from "./Clock";
 import { Counter } from "./Counter";
 import { Helloworld } from "./Helloworld"
 import { Message } from "./Message"
@@ -29,7 +30,9 @@ function App() {
       <Welcome name={<strong>John</strong>} age={44} />
       <AlertClock buttonClicked={handleButtonClick} />
       <Counter counter={counter} incrementCounter={incrementCounter} decrementCounter={decrementCounter}  reset = {reset}/>
-    </>
+      <Clock/>
+     </>
+
   );
 }
 
