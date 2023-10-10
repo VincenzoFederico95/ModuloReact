@@ -15,6 +15,12 @@ function App() {
     function handleCounter() {
         setCounter (counter +1 )
     }
+    function decrementCounter() {
+      setCounter (counter - 1 )
+  }
+  function reset() {
+      setCounter (0)
+  }
 
   return (
     <>
@@ -22,7 +28,7 @@ function App() {
       <Message />
       <Welcome name={<strong>John</strong>} age={44} />
       <AlertClock buttonClicked={handleButtonClick} />
-      <Counter counter={counter} handleCounter={handleCounter}/>
+      <Counter counter={counter} incrementCounter={incrementCounter} decrementCounter={decrementCounter}  reset = {reset}/>
     </>
   );
 }
