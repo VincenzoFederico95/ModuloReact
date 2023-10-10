@@ -1,6 +1,8 @@
+import { useEffect } from "react";
 import { CounterDisplay } from "./CounterDisplay";
 
 export function Counter({ counter, incrementCounter, decrementCounter, reset}) {
+  useEffect(()=>{ console.log(counter)}, [counter])
     return (
       <div>
         <CounterDisplay count={counter} />
