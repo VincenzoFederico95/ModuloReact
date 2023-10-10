@@ -1,6 +1,9 @@
 export function MouseClicker({ name }) {
     function handleClick(e) {
-      console.log(e.target.name);
+        console.log(e.currentTarget.name);
+    }
+    function handleImg(e) {
+        console.log(e.target.src)
     }
     return (
       <button name={name} onClick={handleClick}>
@@ -9,4 +12,4 @@ export function MouseClicker({ name }) {
     );
   }
 
- /* si, il nome viene comunque stampato in console graie all'evento collegato al pulsante, tuttavia verrà attivato dall'immagine */
+ /* Per farlo, si può utilizzare la proprietà dell'evento CurrentTarget, che consente di individuare l'elemento a cui è collegato il gestore di eventi */
