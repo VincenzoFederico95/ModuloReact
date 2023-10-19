@@ -22,5 +22,5 @@ export function UncontrolledLogin() {
   )
 }
 
-//possono essere utilizzate altre API per accedere ai valori del mio form come l'uso del metodo costructor dell'API FormData, 
-//esistono anche alcune scorciatoie dell'API standard ma non tutti i browser le supportano.
+//il vantaggio è accorciare il codice e la sintassi, lo svantaggio è che nelle caselle di controllo 
+//bisogna utilizzare l'operatore ternario per avere il risultato voluto
