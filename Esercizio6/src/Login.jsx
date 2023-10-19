@@ -17,7 +17,8 @@ export function Login({ onLogin }) {
     });
   }
 
-  function handleLogin() {
+  function handleLogin(e) {
+    e.preventDefault();
     onLogin(data);
   }
 
@@ -26,28 +27,35 @@ export function Login({ onLogin }) {
   }
   return (
     <div>
-      <input
-        type="text"
-        name="username"
-        value={data.username}
-        onChange={handleDataChange}
-      />
-      <input
-        type="password"
-        name="password"
-        value={data.password}
-        onChange={handleDataChange}
-      />
-      <input
-        type="checkbox"
-        name="remember"
-        checked={data.remember}
-        onChange={handleDataChange}
-      />
-      <button disabled={!data.username || !data.password} onClick={handleLogin}>
-        Login
-      </button>
-      <button onClick={handleReset}>Reset</button>
+      <form onSubmit={handleLogin} action="#">
+        <input
+          type="text"
+          name="username"
+          value={data.username}
+          onChange={handleDataChange}
+        />
+        <input
+          type="password"
+          name="password"
+          value={data.password}
+          onChange={handleDataChange}
+        />
+        <input
+          type="checkbox"
+          name="remember"
+          checked={data.remember}
+          onChange={handleDataChange}
+        />
+        <button
+          disabled={!data.username || !data.password}
+          type="submit"
+        
+        >
+          Login
+        </button>
+
+        <button onClick={handleReset}>Reset</button>
+      </form>
     </div>
   );
 }
