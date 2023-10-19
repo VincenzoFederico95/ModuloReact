@@ -9,6 +9,8 @@ import { MouseClicker } from "./Mouseclicker";
 import { MultiButton } from "./Multibutton";
 import { Welcome } from "./Welcome"
 import { useState } from "react";
+import { Focusableinputs } from "./Focusableinput";
+import { Colors } from "./Color";
 
 
 function App() {
@@ -39,6 +41,25 @@ function App() {
       <MultiButton nameOne="one" nameTwo ="two"  nameThree = "three"/>
       <InteractiveWelcome/>
       <Login/>
+      <Focusableinputs/>
+      <Colors
+      items={[{
+        id:1,
+        name: "VicIo",
+        },
+          {
+        id:2,
+        name: "Fede",
+        },
+          {
+        id:3,
+        name: "Giulio",
+        },
+          {
+        id:4,
+        name: " Luca",
+      }]
+      }/>
      </>
 
   );
