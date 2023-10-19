@@ -1,11 +1,11 @@
 export function Colors({ items }) {
-  return (
-    <>
-      <ul>
-        {items.map((item) => (
-          <li key={item}> {item} </li>
-        ))}
-      </ul>
-    </>
-  );
-}
+    return (
+      <>
+        <ul>
+          {items.map((item) => (
+            <li key={item.id}> {item.name} </li>
+          ))}
+        </ul>
+      </>
+    );
+  }
