@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-export function Login({onLogin}) {
-  function useData() {
-    return { password: "", username: "", remember: false };
-  }
+function useData() {
+  return { password: "", username: "", remember: false };
+}
+export function Login({ onLogin }) {
   const [data, setData] = useState(useData());
 
   function handleDataChange(e) {
@@ -19,6 +19,10 @@ export function Login({onLogin}) {
 
   function handleLogin() {
     onLogin(data);
+  }
+
+  function handleReset() {
+    setData(useData());
   }
   return (
     <div>
@@ -43,6 +47,7 @@ export function Login({onLogin}) {
       <button disabled={!data.username || !data.password} onClick={handleLogin}>
         Login
       </button>
+      <button onClick={handleReset}>Reset</button>
     </div>
   );
 }
