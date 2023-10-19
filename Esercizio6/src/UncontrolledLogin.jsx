@@ -21,3 +21,6 @@ export function UncontrolledLogin() {
     </form>
   )
 }
+
+//possono essere utilizzate altre API per accedere ai valori del mio form come l'uso del metodo costructor dell'API FormData, 
+//esistono anche alcune scorciatoie dell'API standard ma non tutti i browser le supportano.
