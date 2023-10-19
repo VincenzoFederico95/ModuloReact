@@ -2,6 +2,7 @@ import { AlertClock } from "./Alertclock";
 import { Clock } from "./Clock";
 import { Counter } from "./Counter";
 import { Helloworld } from "./Helloworld"
+import { InteractiveWelcome } from "./InteractiveWelcome";
 import { Message } from "./Message"
 import { MouseClicker } from "./Mouseclicker";
 import { MultiButton } from "./Multibutton";
@@ -35,6 +36,7 @@ function App() {
       <Clock/>
       <MouseClicker name={"one"}/>
       <MultiButton nameOne="one" nameTwo ="two"  nameThree = "three"/>
+      <InteractiveWelcome/>
      </>
 
   );
