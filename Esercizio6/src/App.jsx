@@ -27,6 +27,11 @@ function App() {
       setCounter (0)
   }
 
+  function handleLogin(data) {
+    console.log('The user data are: ',data);
+  }
+
+
   return (
     <>
       <Helloworld/>
