@@ -5,6 +5,7 @@ export function ToDoList() {
   const inputRef = useRef(null);
   function handleButton() {
     setItems([...items, inputRef.current.value]);
+    inputRef.current.value = " ";
   }
   return (
     <>
