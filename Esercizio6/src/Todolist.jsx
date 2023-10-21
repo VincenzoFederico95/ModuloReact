@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+mport { useRef, useState } from "react";
 
 export function ToDoList() {
   const [items, setItems] = useState([]);
@@ -6,6 +6,10 @@ export function ToDoList() {
   function handleButton() {
     setItems([...items, inputRef.current.value]);
     inputRef.current.value = " ";
+  }
+  
+  function handleResetButton() {
+    setItems([])
   }
   return (
     <>
@@ -15,7 +19,8 @@ export function ToDoList() {
         ))}
       </ul>
       <input ref={inputRef} type="text" />
-      <button onClick={handleButton}> Add some </button>
+      <button onClick={handleButton}> To do </button>
+      <button onClick={handleResetButton}>Reset</button>
     </>
   );
 }
