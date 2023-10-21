@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-function useData() {
-  return { password: "", username: "", remember: false };
-}
 export function Login({ onLogin }) {
+  function useData() {
+    return { password: "", username: "", remember: false };
+  }
   const [data, setData] = useState(useData());
 
   function handleDataChange(e) {
@@ -17,45 +17,34 @@ export function Login({ onLogin }) {
     });
   }
 
-  function handleLogin(e) {
-    e.preventDefault();
+  function handleLogin() {
     onLogin(data);
   }
 
-  function handleReset() {
-    setData(useData());
-  }
   return (
     <div>
-      <form onSubmit={handleLogin} action="#">
-        <input
-          type="text"
-          name="username"
-          value={data.username}
-          onChange={handleDataChange}
-        />
-        <input
-          type="password"
-          name="password"
-          value={data.password}
-          onChange={handleDataChange}
-        />
-        <input
-          type="checkbox"
-          name="remember"
-          checked={data.remember}
-          onChange={handleDataChange}
-        />
-        <button
-          disabled={!data.username || !data.password}
-          type="submit"
-        
-        >
-          Login
-        </button>
-
-        <button onClick={handleReset}>Reset</button>
-      </form>
+      <input
+        type="text"
+        name="username"
+        value={data.username}
+        onChange={handleDataChange}
+      />
+      <input
+        style={{ backgroundColor: data.password.length > 8 ? "green" : "red" }}
+        type="password"
+        name="password"
+        value={data.password}
+        onChange={handleDataChange}
+      />
+      <input
+        type="checkbox"
+        name="remember"
+        checked={data.remember}
+        onChange={handleDataChange}
+      />
+      <button disabled={!data.username || !data.password} onClick={handleLogin}>
+        Login
+      </button>
     </div>
   );
 }
