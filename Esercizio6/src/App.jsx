@@ -1,4 +1,4 @@
-import { Helloworld } from "./Hello";
+import { Helloworld } from "./Helloworld";
 import { Message } from "./Message";
 import { Welcome } from "./Welcome";
 import { AlertClock } from "./AlertClock";
