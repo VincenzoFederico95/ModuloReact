@@ -1,3 +1,3 @@
-export function CounterDisplay({count}) {
-    return <h2>{count} </h2>   
-   }
+export function CounterDisplay({ count }) {
+  return <h2>{count} </h2>;
+}
