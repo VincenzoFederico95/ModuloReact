@@ -18,7 +18,7 @@ function App() {
 export default App
 
 /* utilizzando questa espressione viene visualizzato a scheremo comunque il "name"
-in grassetto /*
+in grassetto */
 
 
 
