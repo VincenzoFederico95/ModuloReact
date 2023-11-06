@@ -14,7 +14,7 @@ import { Colors } from "./Color";
 import { ToDoList } from "./Todolist";
 import { Container } from "./Container";
 import GithubUsersList from "./GithubUsersList";
-import CurrentLocation from "./CurrentLocation";
+
 
 function App() {
   function handleButtonClick() {
