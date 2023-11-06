@@ -34,8 +34,15 @@ function App() {
     console.log("The user data are: ", data);
   }
 
+  const [language, setLanguage] = useState("en");
+
+  function handleLanguageSelection(language) {
+    setLanguage(language);
+  }
+
   return (
     <>
+     <Container title={<h1> This is my awesome container </h1>}></Container>
       <Helloworld />
       <Message />
       <Welcome name={<strong>John</strong>} age={44} />
@@ -47,18 +54,16 @@ function App() {
         reset={reset}
       />
 
-      <LanguageContext.Provider value={language}>
-        <select
-          onChange={() => handleLanguageSelection("IT")}
-          name="language"
-          id="language"
-        >
-          <option value="en">EN</option>
-          <option value="it">IT</option>
-        </select>
+<select
+        onChange={() => handleLanguageSelection("IT")}
+        name="language"
+        id="language"
+      >
+        <option value="en">EN</option>
+        <option value="it">IT</option>
+      </select>
 
         <Clock />
-      </LanguageContext.Provider>
 
       <MouseClicker name={"one"} />
       <MultiButton nameOne="one" nameTwo="two" nameThree="three" />
