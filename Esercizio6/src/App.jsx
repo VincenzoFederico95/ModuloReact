@@ -34,8 +34,15 @@ function App() {
     console.log("The user data are: ", data);
   }
 
+  const [language, setLanguage] = useState("en");
+
+  function handleLanguageSelection(language) {
+    setLanguage(language);
+  }
+
   return (
     <>
+       <Container title={<h1> This is my awesome container </h1>}></Container>
       <Helloworld />
       <Message />
       <Welcome name={<strong>John</strong>} age={44} />
