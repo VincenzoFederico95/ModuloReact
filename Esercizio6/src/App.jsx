@@ -1,23 +1,25 @@
-
 import { Link, Route, Routes } from "react-router-dom";
 import { Welcome } from "./Welcome";
 import { Counter } from "./Counter";
+import GithubUsersList from "./GithubUsersList";
 import ShowGithubUser from "./ShowGithubUser";
 
 const App = () => {
   return (
     <>
       <nav>
-        <Link to="/"> Home </Link>
-        <Link to="/counter"> Counter </Link>
-        <Link to="/users/:username"> Users </Link>
+        <Link to="/">Home</Link>
+        <Link to="/counter">Counter</Link>
+        <Link to="/users">Users</Link>
       </nav>
 
       <Routes>
         <Route path="/" element={<Welcome />} />
         <Route path="/counter" element={<Counter />} />
-        <Route path="/users/:username" element={<ShowGithubUser />} />
-        <Route path="/:name" element={<Welcome />} />
+        <Route path="/users" element={<GithubUsersList />} >
+           <Route index element={<p> Add a user and select it </p>} />
+          <Route path="/users/:username" element={<ShowGithubUser />} />
+          </Route>
         <Route
           path="*"
           element={
