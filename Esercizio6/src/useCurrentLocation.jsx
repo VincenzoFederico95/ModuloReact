@@ -32,4 +32,4 @@ const useCurrentLocation = () => {
   };
 };
 
-export default useCurrentLocation;
+export default useCurrentLocation; 
