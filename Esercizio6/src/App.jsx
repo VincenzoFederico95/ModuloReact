@@ -95,7 +95,7 @@ function App() {
       <ToDoList />
       <Container />
       <GithubUsersList />
-      <CurrentLocation/>
+      
     </>
   );
 }
