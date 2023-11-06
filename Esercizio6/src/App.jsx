@@ -14,6 +14,7 @@ import { Colors } from "./Color";
 import { ToDoList } from "./Todolist";
 import { Container } from "./Container";
 import GithubUsersList from "./GithubUsersList";
+import CurrentLocation from "./CurrentLocation";
 
 function App() {
   function handleButtonClick() {
@@ -35,8 +36,16 @@ function App() {
     console.log("The user data are: ", data);
   }
 
+  const [language, setLanguage] = useState("en");
+
+  function handleLanguageSelection(language) {
+    setLanguage(language);
+  }
+
+
   return (
     <>
+      <Container title={<h1> This is my awesome container </h1>}></Container>
       <Helloworld />
       <Message />
       <Welcome name={<strong>John</strong>} age={44} />
@@ -47,19 +56,16 @@ function App() {
         decrementCounter={decrementCounter}
         reset={reset}
       />
+      <select
+        onChange={() => handleLanguageSelection("IT")}
+        name="language"
+        id="language"
+      >
+        <option value="en">EN</option>
+        <option value="it">IT</option>
+      </select>
 
-      <LanguageContext.Provider value={language}>
-        <select
-          onChange={() => handleLanguageSelection("IT")}
-          name="language"
-          id="language"
-        >
-          <option value="en">EN</option>
-          <option value="it">IT</option>
-        </select>
-
-        <Clock />
-      </LanguageContext.Provider>
+      <Clock />
 
       <MouseClicker name={"one"} />
       <MultiButton nameOne="one" nameTwo="two" nameThree="three" />
@@ -88,7 +94,8 @@ function App() {
       />
       <ToDoList />
       <Container />
-      <GithubUsersList/>
+      <GithubUsersList />
+      <CurrentLocation/>
     </>
   );
 }
