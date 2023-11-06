@@ -46,11 +46,24 @@ function App() {
         decrementCounter={decrementCounter}
         reset={reset}
       />
-      <Clock />
+
+      <LanguageContext.Provider value={language}>
+        <select
+          onChange={() => handleLanguageSelection("IT")}
+          name="language"
+          id="language"
+        >
+          <option value="en">EN</option>
+          <option value="it">IT</option>
+        </select>
+
+        <Clock />
+      </LanguageContext.Provider>
+
       <MouseClicker name={"one"} />
       <MultiButton nameOne="one" nameTwo="two" nameThree="three" />
       <InteractiveWelcome />
-      <Login />
+      <Login onLogin={handleLogin} />
       <Focusableinputs />
       <Colors
         items={[
@@ -72,8 +85,8 @@ function App() {
           },
         ]}
       />
-      <ToDoList/>
-      <Container/>
+      <ToDoList />
+      <Container />
     </>
   );
 }
