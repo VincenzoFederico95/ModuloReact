@@ -22,3 +22,6 @@ export function Clock() {
     </div>
   );
 }
+
+
+//il componente Clock non può più accedere al Context del componente LanguageContext, e quindi accede al valore predefinito dato all'hook "useContext".
