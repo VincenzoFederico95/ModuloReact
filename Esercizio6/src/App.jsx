@@ -12,6 +12,7 @@ import { useState } from "react";
 import { Focusableinputs } from "./Focusableinput";
 import { Colors } from "./Color";
 import { ToDoList } from "./Todolist";
+import { Container } from "./Container";
 
 function App() {
   function handleButtonClick() {
@@ -72,6 +73,7 @@ function App() {
         ]}
       />
       <ToDoList/>
+      <Container/>
     </>
   );
 }
