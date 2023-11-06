@@ -13,6 +13,7 @@ import { Focusableinputs } from "./Focusableinput";
 import { Colors } from "./Color";
 import { ToDoList } from "./Todolist";
 import { Container } from "./Container";
+import GithubUsersList from "./GithubUsersList";
 
 function App() {
   function handleButtonClick() {
@@ -87,6 +88,7 @@ function App() {
       />
       <ToDoList />
       <Container />
+      <GithubUsersList/>
     </>
   );
 }

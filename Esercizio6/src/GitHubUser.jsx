@@ -1,34 +1,40 @@
-import { useEffect, useState } from "react";
+import { useState, useEffect } from "react";
 
-export function GithubUser({ name }) {
+export function GithubUser({ selectedUser }) {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);
 
-  async function fetchGithubUser(name) {
-    try {
-      const response = await fetch(`https://api.github.com/users/${name}`);
-      if (response.ok) {
-        const userData = await response.json();
-        setData(userData);
-          setError(null);
-          console.log(data);
-      } else {
-        setError("An error occurred in the server call");
-      }
-    } catch (error) {
-      setError("An error occurred in your code", error);
-    }
-  }
-
   useEffect(() => {
-    fetchGithubUser(name);
-  }, [name]);
+    async function fetchGithubUser() {
+      try {
+        const response = await fetch(`https://api.github.com/users/${selectedUser}`);
+        if (response.ok) {
+          const userData = await response.json();
+          setData(userData);
+          setError(null);
+        } else {
+          setError("An error occurred in the server call");
+        }
+      } catch (error) {
+        setError("An error occurred in your code", error);
+      }
+    }
+
+    fetchGithubUser();
+  }, [selectedUser]);
 
   return (
     <div>
-      <h2>{data && data.login}</h2>
-      <h3>{data && data.name}</h3>
-      <h4>{data && data.avatar_url}</h4>
+     
+      {data ? (
+        <div>
+          <h2>{data.login}</h2>
+          <h3>{data.name}</h3>
+          <img src={data.avatar_url} alt="Avatar" />
+        </div>
+      ) : 'Loading...'
+    
+      }
     </div>
   );
 }
