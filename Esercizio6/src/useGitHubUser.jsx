@@ -12,18 +12,11 @@ if (username === null) {
   }
 
 
-  const { data, error, mutate } = useSWR(`https://api.github.com/users/${username}`, fetcher);
-  
-  const handleRefetchData = () => {
-  mutate()
-}
-
+const{data, error} = useSWR(`https://api.github.com/users/${username}`, fetcher);
   return {
-
     data,
     error,
     fetchGithubUser: fetcher,
-    onRefetch: handleRefetchData,
     loading: !data && !error,
   };
 };
